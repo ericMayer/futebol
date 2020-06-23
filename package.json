@@ -1,0 +1,35 @@
+{
+  "name": "futebol",
+  "version": "1.0.0",
+  "description": "Projeto sobre futebol",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development --watch ./modules/script.js --output ./js/main.js",
+    "main": "webpack --mode production ./js/script.js --output ./js/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ericMayer/futebol.git"
+  },
+  "author": "EricMayer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ericMayer/futebol/issues"
+  },
+  "homepage": "https://github.com/ericMayer/futebol#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.10.3",
+    "@babel/core": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "eslint": "^7.3.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.21.2",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.10.1",
+    "eslint-config-prettier": "^6.11.0",
+    "whatwg-fetch": "^3.0.0"
+  }
+}
