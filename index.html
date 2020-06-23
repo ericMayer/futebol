@@ -6,7 +6,29 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
     />
-    <title>Document</title>
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <link rel="stylesheet" href="style/style.css" />
+    <title>Futebol</title>
   </head>
-  <body></body>
+  <body>
+    <div>
+      <nav>
+        <!-- por padrão não será expandido o menu
+        necessário definir o id do menu que quero controlar
+        com o mesmo nome do aria-controls -->
+        <button
+          data-menu
+          aria-expanded="false"
+          aria-controls="menu"
+          class="menu"
+        >
+          Menu
+        </button>
+
+        <ul id="menu"></ul>
+      </nav>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
 </html>
