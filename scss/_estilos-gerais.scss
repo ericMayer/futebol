@@ -1,0 +1,29 @@
+$cor-menu: #0db882;
+$cor-fundo: #f5f5dc;
+$cor-texto-menu: #fff;
+$cor-escura: #000;
+
+$fonte-principal: "Suez One", serif;
+$fonte-secundaria: "Roboto", sans-serif;
+
+body {
+  background-color: $cor-fundo;
+}
+
+// definindo os tamanhos de fontes que serão utilizados
+// p = pequena
+// m = média
+// g = grande
+
+@mixin tamanho($size) {
+  @if ($size == p) {
+    font-family: $fonte-secundaria;
+    font-size: 1.5rem;
+  } @else if($size == m) {
+    font-family: $fonte-principal;
+    font-size: 2rem;
+  } @else if ($size == g) {
+    font-family: $fonte-principal;
+    font-size: 3rem;
+  }
+}

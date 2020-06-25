@@ -7,30 +7,33 @@
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
     />
     <link rel="shortcut icon" href="./img/favicon.ico" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&family=Suez+One&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="./css/style.css" />
     <title>Futebol</title>
   </head>
   <body>
     <div>
-      <nav>
-        <!-- por padrão não será expandido o menu
-        necessário definir o id do menu que quero controlar
-        com o mesmo nome do aria-controls -->
+      <nav class="nav">
+        <!-- aria-expanded e aria-controls são ambos utilizados
+        em leitores de telas, onde um irá dizer que o conteúdo não está expandido do menu abaixo e o outro diz qual item controla, por isso é definido o id com do item que será controlado com mesmo nome -->
         <button
           data-menu
           aria-expanded="false"
-          aria-controls="menu"
-          class="menu-controle"
+          aria-controls="menu-hamburguer"
+          class="menu-botao"
         >
           Menu
         </button>
 
-        <ul id="menu">
-          <li>
-            Brasil
-
-            <ul></ul>
-          </li>
+        <ul id="menu-hamburguer">
+          <!-- <li>
+            Brasileirão 2019
+          </li> -->
         </ul>
       </nav>
     </div>

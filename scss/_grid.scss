@@ -1,0 +1,9 @@
+@mixin grid {
+  display: grid;
+
+  grid-template-columns: 100px 800px 300px;
+}
+
+.grid-container {
+  @include grid();
+}

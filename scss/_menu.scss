@@ -1,0 +1,31 @@
+.nav {
+  background-color: $cor-menu;
+
+  padding: 20px 60px;
+}
+
+.menu-botao {
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  @include tamanho(m);
+  color: $cor-texto-menu;
+  // padding-left: 40px;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 3px;
+    background-color: $cor-texto-menu;
+    margin-right: 6px;
+    border-radius: 4px;
+    box-shadow: 0 -8px $cor-texto-menu, 0 8px $cor-texto-menu;
+  }
+}
+
+#menu-hamburguer {
+}
