@@ -2,6 +2,10 @@
   background-color: $cor-menu;
 
   padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .menu-botao {
@@ -11,7 +15,12 @@
   background-color: transparent;
   cursor: pointer;
   outline: none;
-  @include tamanho(m);
+
+  font-family: $fonte-principal;
+  font-size: 1.7rem;
+
+  margin-bottom: 10px;
+
   color: $cor-texto-menu;
   // padding-left: 40px;
 
@@ -27,5 +36,21 @@
   }
 }
 
-#menu-hamburguer {
+.frases h1 {
+  @include tamanho(medio);
+  color: $cor-texto-menu;
+
+  font-style: normal;
+  max-width: 800px;
+  margin-bottom: 5px;
+}
+
+.frases cite {
+  @include tamanho(citacao);
+  color: $cor-texto-menu;
+}
+
+.logo img {
+  margin-top: 10px;
+  width: 60px;
 }

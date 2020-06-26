@@ -1,0 +1,44 @@
+.ligas {
+  margin: 60px auto;
+}
+
+.liga {
+  grid-column: 2;
+}
+
+.liga h1 {
+  @include tamanho(grande);
+  margin-bottom: 20px;
+}
+
+.liga p {
+  margin-left: 20px;
+  @include tamanho(pequeno);
+}
+
+.liga p + p {
+  margin-top: 20px;
+}
+
+.fonte {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.fonte p {
+  font-size: 1rem;
+}
+
+.fonte cite {
+  @include tamanho(citacao);
+  color: $cor-escura;
+  margin-left: 25px;
+
+  a {
+    color: $cor-escura;
+
+    &:hover {
+      color: $cor-menu;
+    }
+  }
+}
