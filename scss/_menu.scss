@@ -1,0 +1,73 @@
+.nav {
+  background-color: $cor-menu;
+
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.menu-botao {
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+
+  font-family: $fonte-principal;
+  font-size: 1.7rem;
+
+  margin-bottom: 10px;
+
+  color: $cor-texto-menu;
+  // padding-left: 40px;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 3px;
+    background-color: $cor-texto-menu;
+    margin-right: 6px;
+    border-radius: 4px;
+    box-shadow: 0 -8px $cor-texto-menu, 0 8px $cor-texto-menu;
+  }
+}
+
+.frases h1 {
+  @include tamanho(medio);
+  color: $cor-texto-menu;
+
+  font-style: normal;
+  max-width: 800px;
+  margin-bottom: 5px;
+}
+
+.frases cite {
+  @include tamanho(citacao);
+  color: $cor-texto-menu;
+}
+
+.logo img {
+  margin-top: 10px;
+  width: 60px;
+}
+
+#menu-hamburguer {
+  font-family: $fonte-secundaria;
+  font-size: 1.5rem;
+  color: $cor-texto-menu;
+  background-color: $cor-menu;
+
+  display: none;
+}
+
+#menu-hamburguer.ativo {
+  display: block;
+}
+
+#menu-hamburguer li + li {
+  margin-top: 10px;
+}

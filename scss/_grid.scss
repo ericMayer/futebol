@@ -1,0 +1,12 @@
+$gap: 30px;
+
+@mixin grid {
+  display: grid;
+
+  grid-template-columns: 200px minmax(300px, 800px);
+  grid-gap: $gap;
+}
+
+.grid-ligas {
+  @include grid();
+}

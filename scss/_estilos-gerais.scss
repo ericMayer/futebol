@@ -1,0 +1,38 @@
+$cor-menu: #0db882;
+$cor-fundo: #f5f5dc;
+$cor-texto-menu: #fff;
+$cor-escura: #000;
+
+$fonte-principal: "Suez One", serif;
+$fonte-secundaria: "Roboto", sans-serif;
+
+body {
+  background-color: $cor-fundo;
+}
+
+// definindo os tamanhos de fontes que serão utilizados
+// p = pequena
+// m = média
+// g = grande
+// t = texto
+
+@mixin tamanho($size) {
+  @if ($size == citacao) {
+    font-family: $fonte-secundaria;
+    font-size: 0.875rem;
+    font-style: italic;
+  } @else if ($size == pequeno) {
+    font-family: $fonte-secundaria;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    color: $cor-escura;
+  } @else if($size == medio) {
+    font-family: $fonte-secundaria;
+    font-size: 2rem;
+  } @else if ($size == grande) {
+    font-family: $fonte-principal;
+    font-size: 3rem;
+    font-style: normal;
+    color: $cor-menu;
+  }
+}

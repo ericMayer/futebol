@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body,
+ul,
+img,
+button,
+h1,
+h2,
+h3,
+cite,
+p,
+blockquote {
+  padding: 0px;
+  margin: 0px;
+}
+
+h1,
+h2,
+h3,
+cite {
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}

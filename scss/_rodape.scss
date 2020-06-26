@@ -1,0 +1,14 @@
+.rodape {
+  padding: 20px 60px;
+  background-color: $cor-menu;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rodape p {
+  font-family: $fonte-principal;
+  font-size: 1.7rem;
+  color: $cor-texto-menu;
+}
