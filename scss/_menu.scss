@@ -54,3 +54,20 @@
   margin-top: 10px;
   width: 60px;
 }
+
+#menu-hamburguer {
+  font-family: $fonte-secundaria;
+  font-size: 1.5rem;
+  color: $cor-texto-menu;
+  background-color: $cor-menu;
+
+  display: none;
+}
+
+#menu-hamburguer.ativo {
+  display: block;
+}
+
+#menu-hamburguer li + li {
+  margin-top: 10px;
+}
