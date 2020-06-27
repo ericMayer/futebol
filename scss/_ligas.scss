@@ -4,11 +4,19 @@
 
 .liga {
   grid-column: 2;
+
+  @include responsivo(celular) {
+    grid-column: 1 / -1;
+  }
 }
 
 .liga h1 {
   @include tamanho(grande);
   margin-bottom: 20px;
+
+  @include responsivo(celular) {
+    margin-left: 10px;
+  }
 }
 
 .liga p {
@@ -35,10 +43,12 @@
   margin-left: 25px;
 
   a {
-    color: $cor-escura;
+    color: $cor-menu;
+  }
 
-    &:hover {
-      color: $cor-menu;
+  @include responsivo(celular) {
+    span {
+      margin-left: 25px;
     }
   }
 }

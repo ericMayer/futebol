@@ -3,10 +3,25 @@ $gap: 30px;
 @mixin grid {
   display: grid;
 
-  grid-template-columns: 200px minmax(300px, 800px);
+  grid-template-columns: 200px minmax(auto, 800px);
   grid-gap: $gap;
 }
 
 .grid-ligas {
   @include grid();
+}
+
+$tablet: 1120px;
+$celular: 770px;
+
+@mixin responsivo($device) {
+  @if ($device == celular) {
+    @media only screen and (max-width: $celular) {
+      @content;
+    }
+  } @else if ($device == tablet) {
+    @media only screen and (max-width: $tablet) {
+      @content;
+    }
+  }
 }

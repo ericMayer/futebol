@@ -1,13 +1,28 @@
+// será criado o menu, onde
+// cada item terá um espaço de distância
+// igual entre eles e todos alinhados ao centro
 .nav {
   background-color: $cor-menu;
-
   padding: 20px 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+
+  @include responsivo(celular) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 0px 20px 10px;
+  }
 }
 
+// criando o menu hamburguer, usando
+// sombras para criar o ícone do menu
+// será display flex e alinhado ao centro
+// o background será transparente para pegar
+// a cor de fundo, a posição será relative,
+// pois a lista do menu deverá ser absolute em relação
+// a ele
 .menu-botao {
   display: flex;
   align-items: center;
@@ -15,25 +30,78 @@
   background-color: transparent;
   cursor: pointer;
   outline: none;
-
+  position: relative;
+  z-index: 10;
   font-family: $fonte-principal;
   font-size: 1.7rem;
-
   margin-bottom: 10px;
+  border-radius: 4px;
 
   color: $cor-texto-menu;
-  // padding-left: 40px;
 
   &::before {
     content: "";
     display: inline-block;
     width: 25px;
     height: 3px;
+    border-radius: 4px;
     background-color: $cor-texto-menu;
     margin-right: 6px;
-    border-radius: 4px;
     box-shadow: 0 -8px $cor-texto-menu, 0 8px $cor-texto-menu;
   }
+}
+
+// a lista de opções do menu
+// irá ser alinhada a esquerda, para não ficar
+// um espaço em branco na esquerda, começará não sendo exibido
+// e terá a posição absolute em relação a posição do botão
+// do menu, o z-index será menor do botão, para que não
+// fique por cima dele
+// terá um padding de 80px para que fique alinhado corretamente
+// terá uma sombra onde será 2px para baixo, 2px para direita
+// 2px de borrado e a sombra não irá expandir
+// a cor será com um transparência de 50%
+#menu-list {
+  font-family: $fonte-secundaria;
+  font-size: 1.5rem;
+  background-color: $cor-menu;
+  align-self: left;
+  display: none;
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  padding: 80px;
+  box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+// animação onde o menu irá sair da esquerda
+@keyframes menu {
+  from {
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0px, 0, 0);
+  }
+}
+
+// quando tiver a classe ativo será exibido o menu
+// e chamado a animação
+#menu-list.ativo {
+  display: block;
+  animation: menu 0.5s forwards;
+}
+
+#menu-list a {
+  color: $cor-texto-menu;
+}
+
+// sempre que tiver um li antes o próximo
+// terá 10 px de margin top
+#menu-list li + li {
+  margin-top: 10px;
 }
 
 .frases h1 {
@@ -43,31 +111,22 @@
   font-style: normal;
   max-width: 800px;
   margin-bottom: 5px;
+  margin-right: 20px;
+  margin-left: 20px;
+
+  @include responsivo(tablet) {
+    max-width: 400px;
+  }
 }
 
 .frases cite {
   @include tamanho(citacao);
   color: $cor-texto-menu;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 
 .logo img {
   margin-top: 10px;
   width: 60px;
-}
-
-#menu-hamburguer {
-  font-family: $fonte-secundaria;
-  font-size: 1.5rem;
-  color: $cor-texto-menu;
-  background-color: $cor-menu;
-
-  display: none;
-}
-
-#menu-hamburguer.ativo {
-  display: block;
-}
-
-#menu-hamburguer li + li {
-  margin-top: 10px;
 }

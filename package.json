@@ -4,8 +4,8 @@
   "description": "Projeto sobre futebol",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --mode development --watch ./modules/script.js --output ./js/main.js",
-    "main": "webpack --mode production ./js/script.js --output ./js/main.js"
+    "dev": "webpack --mode development --watch",
+    "main": "webpack --mode production"
   },
   "repository": {
     "type": "git",

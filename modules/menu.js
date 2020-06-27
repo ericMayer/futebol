@@ -4,8 +4,9 @@ export default class Menu {
     this.menu = document.querySelector(menu);
   }
 
-  clicouMenu() {
-    this.menu.classList.add("ativo");
+  clicouMenu(event) {
+    event.preventDefault();
+    this.menu.classList.toggle("ativo");
   }
 
   bind() {
