@@ -65,7 +65,7 @@
   font-family: $fonte-secundaria;
   font-size: 1.5rem;
   background-color: $cor-menu;
-  align-self: left;
+
   display: none;
   position: absolute;
   z-index: 5;
@@ -73,6 +73,12 @@
   left: 0;
   padding: 80px;
   box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5);
+
+  @include responsivo(celular) {
+    padding-top: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 // animação onde o menu irá sair da esquerda
