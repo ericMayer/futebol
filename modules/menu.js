@@ -4,6 +4,7 @@ export default class Menu {
   constructor(botao, menu) {
     this.botao = document.querySelector(botao);
     this.menu = document.querySelector(menu);
+    this.html = document.documentElement;
   }
 
   // quando for clicado no menu
@@ -12,25 +13,21 @@ export default class Menu {
   // caso já tenha
   clicouMenu(event) {
     event.preventDefault();
+
     this.menu.classList.toggle("ativo");
 
-    setTimeout(document.addEventListener("click", this.clicouFora), 1000);
+    setTimeout(() => {
+      this.html.addEventListener("click", this.clicouFora);
+    }, 0);
   }
 
   clicouFora(event) {
-    const array = Array.from(event.path);
-
-    if (
-      array.find((item) => {
-        return this.botao === item;
-      })
-    ) {
+    console.log(event.target, this.menu);
+    if (event.target !== this.botao && event.target !== this.menu) {
       this.menu.classList.remove("ativo");
+      console.log("oi");
+      this.html.removeEventListener("click", this.clicouFora);
     }
-
-    // if (!event.path.contains(this.botao)) {
-    //   this.menu.classList.remove("ativo");
-    // }
   }
 
   // alterando referências dos callbacks
@@ -48,7 +45,10 @@ export default class Menu {
   // retornando referência da classe
   iniciar() {
     this.bind();
-    this.addEvents();
+
+    if (this.botao && this.menu) {
+      this.addEvents();
+    }
 
     return this;
   }
