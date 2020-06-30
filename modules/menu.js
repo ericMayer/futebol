@@ -10,22 +10,33 @@ export default class Menu {
   // quando for clicado no menu
   // será prevenido o padrão
   // e adicionado a classe ativo ou remover,
-  // caso já tenha
+  // caso já tenha sido clicado
+  // será adicionado o evento
+  // de click no html, esse evento
+  // será adicionado com o setTimeout, pois
+  // assim irá ser adicionado apenas depois da
+  // execução de todos os eventos (event bubble)
   clicouMenu(event) {
     event.preventDefault();
 
     this.menu.classList.toggle("ativo");
 
-    setTimeout(() => {
-      this.html.addEventListener("click", this.clicouFora);
-    }, 0);
+    this.html.addEventListener("click", this.clicouFora);
+
+    // setTimeout(() => {
+    //   this.html.addEventListener("click", this.clicouFora);
+    // }, 0);
   }
 
+  // verifica não foi clicado
+  // no botão do menu e
+  // na lista do menu, caso não
+  // remove a classe ativo do menu
+  // e remove o evento do html
   clicouFora(event) {
-    console.log(event.target, this.menu);
     if (event.target !== this.botao && event.target !== this.menu) {
       this.menu.classList.remove("ativo");
-      console.log("oi");
+
       this.html.removeEventListener("click", this.clicouFora);
     }
   }
