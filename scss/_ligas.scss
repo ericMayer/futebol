@@ -10,13 +10,33 @@
   }
 }
 
+// terá uma seta que irá indicar se o conteúdo
+// está aberto ou fechado
 .liga h1 {
   @include tamanho(grande);
   margin-bottom: 20px;
 
+  &::after {
+    @include arrow(close);
+  }
+
   @include responsivo(celular) {
     margin-left: 10px;
   }
+}
+
+.liga.ativo h1 {
+  &::after {
+    @include arrow(open);
+  }
+}
+
+.liga-descricao {
+  display: none;
+}
+
+.liga-descricao.ativo {
+  display: block;
 }
 
 .liga p {

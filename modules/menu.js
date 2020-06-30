@@ -4,33 +4,41 @@ export default class Menu {
   constructor(botao, menu) {
     this.botao = document.querySelector(botao);
     this.menu = document.querySelector(menu);
+    this.html = document.documentElement;
   }
 
   // quando for clicado no menu
   // será prevenido o padrão
   // e adicionado a classe ativo ou remover,
-  // caso já tenha
+  // caso já tenha sido clicado
+  // será adicionado o evento
+  // de click no html, esse evento
+  // será adicionado com o setTimeout, pois
+  // assim irá ser adicionado apenas depois da
+  // execução de todos os eventos (event bubble)
   clicouMenu(event) {
     event.preventDefault();
+
     this.menu.classList.toggle("ativo");
 
-    setTimeout(document.addEventListener("click", this.clicouFora), 1000);
+    this.html.addEventListener("click", this.clicouFora);
+
+    // setTimeout(() => {
+    //   this.html.addEventListener("click", this.clicouFora);
+    // }, 0);
   }
 
+  // verifica não foi clicado
+  // no botão do menu e
+  // na lista do menu, caso não
+  // remove a classe ativo do menu
+  // e remove o evento do html
   clicouFora(event) {
-    const array = Array.from(event.path);
-
-    if (
-      array.find((item) => {
-        return this.botao === item;
-      })
-    ) {
+    if (event.target !== this.botao && event.target !== this.menu) {
       this.menu.classList.remove("ativo");
-    }
 
-    // if (!event.path.contains(this.botao)) {
-    //   this.menu.classList.remove("ativo");
-    // }
+      this.html.removeEventListener("click", this.clicouFora);
+    }
   }
 
   // alterando referências dos callbacks
@@ -48,7 +56,10 @@ export default class Menu {
   // retornando referência da classe
   iniciar() {
     this.bind();
-    this.addEvents();
+
+    if (this.botao && this.menu) {
+      this.addEvents();
+    }
 
     return this;
   }
