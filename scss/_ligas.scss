@@ -13,6 +13,9 @@
 // terá uma seta que irá indicar se o conteúdo
 // está aberto ou fechado
 .liga h1 {
+  display: block;
+  cursor: pointer;
+  max-width: 300px;
   @include tamanho(grande);
   margin-bottom: 20px;
 
@@ -35,13 +38,27 @@
   display: none;
 }
 
+@keyframes conteudo {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .liga-descricao.ativo {
   display: block;
+  animation: conteudo 0.5s forwards;
 }
 
 .liga p {
   margin-left: 20px;
   @include tamanho(pequeno);
+
+  @include responsivo(celular) {
+    margin-right: 10px;
+  }
 }
 
 .liga p + p {
@@ -61,14 +78,21 @@
   @include tamanho(citacao);
   color: $cor-escura;
   margin-left: 25px;
-
+  line-height: 1.4rem;
   a {
     color: $cor-menu;
   }
 
   @include responsivo(celular) {
-    span {
-      margin-left: 25px;
-    }
+    // margin-right: 10px;
+  }
+}
+
+.fonte span {
+  @include tamanho(citacao);
+  color: $cor-escura;
+  @include responsivo(celular) {
+    display: block;
+    margin-left: 25px;
   }
 }
