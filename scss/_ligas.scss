@@ -28,16 +28,19 @@
   }
 }
 
+// conteúdo está aberto, alterando seta
 .liga.ativo h1 {
   &::after {
     @include arrow(open);
   }
 }
 
+// descrição irá começar sem exibir nada
 .liga-descricao {
   display: none;
 }
 
+// animação do conteúdo quando ele for aberto
 @keyframes conteudo {
   from {
     opacity: 0;
@@ -47,6 +50,7 @@
   }
 }
 
+// exibindo conteúdo e fazendo animação
 .liga-descricao.ativo {
   display: block;
   animation: conteudo 0.5s forwards;
@@ -91,6 +95,7 @@
 .fonte span {
   @include tamanho(citacao);
   color: $cor-escura;
+
   @include responsivo(celular) {
     display: block;
     margin-left: 25px;
