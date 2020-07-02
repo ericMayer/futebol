@@ -120,8 +120,25 @@
   margin-right: 20px;
   margin-left: 20px;
 
+  &::after {
+    content: "|";
+    display: inline-block;
+    margin-left: 5px;
+    animation: cursorPiscando 0.6s infinite;
+  }
+
   @include responsivo(tablet) {
     max-width: 400px;
+  }
+}
+
+@keyframes cursorPiscando {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
 
@@ -130,6 +147,13 @@
   color: $cor-texto-menu;
   margin-right: 20px;
   margin-left: 20px;
+
+  &::after {
+    content: "|";
+    display: inline-block;
+    margin-left: 5px;
+    animation: cursorPiscando 0.6s infinite;
+  }
 }
 
 .logo img {
