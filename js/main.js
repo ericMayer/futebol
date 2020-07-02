@@ -118,7 +118,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./menu.js */ \"./modules/menu.js\");\n/* harmony import */ var _ligaAccordion_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ligaAccordion.js */ \"./modules/ligaAccordion.js\");\n\r\n\r\nconst menu = new _menu_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"](\"[data-menu]\", \"#menu-list\");\r\nmenu.iniciar();\r\n\r\n\r\n\r\nconst accordion = new _ligaAccordion_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"](\".liga\", \".liga h1\", \".liga-descricao\");\r\naccordion.iniciar();\r\n\n\n//# sourceURL=webpack:///./modules/script.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./menu.js */ \"./modules/menu.js\");\n/* harmony import */ var _ligaAccordion_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ligaAccordion.js */ \"./modules/ligaAccordion.js\");\n\r\n\r\nconst menu = new _menu_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"](\"[data-menu]\", \"#menu-list\");\r\nmenu.iniciar();\r\n\r\n\r\n\r\nconst accordion = new _ligaAccordion_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"](\r\n  \"[data-liga]\",\r\n  \"[data-liga] h1\",\r\n  \"[data-liga='descricao']\"\r\n);\r\naccordion.iniciar();\r\n\n\n//# sourceURL=webpack:///./modules/script.js?");
 
 /***/ }),
 

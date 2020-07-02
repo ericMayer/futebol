@@ -5,5 +5,9 @@ menu.iniciar();
 
 import Accordion from "./ligaAccordion.js";
 
-const accordion = new Accordion(".liga", ".liga h1", ".liga-descricao");
+const accordion = new Accordion(
+  "[data-liga]",
+  "[data-liga] h1",
+  "[data-liga='descricao']"
+);
 accordion.iniciar();
