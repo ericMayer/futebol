@@ -13,7 +13,7 @@ $gap: 30px;
 
 @mixin grid-campeonatos {
   display: grid;
-  grid-template-columns: 100px minmax(auto, 800px) 300px;
+  grid-template-columns: minmax(auto, 1000px) 300px;
   grid-gap: $gap;
 }
 

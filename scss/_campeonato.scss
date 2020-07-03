@@ -1,9 +1,9 @@
 .campeonatos {
-  margin: 60px auto;
+  margin: 60px 60px;
 }
 
 .campeonato {
-  grid-column: 2;
+  grid-column: 1;
 }
 
 .campeonato h1 {
@@ -15,7 +15,7 @@
 }
 
 .rodadas {
-  grid-column: 3;
+  grid-column: 2;
 }
 
 .rodadas h1 {
@@ -30,15 +30,21 @@
   margin-top: 20px;
 }
 
-.campeonato-cabecalho th {
-  @include tamanho(citacao);
-  line-height: 0;
-  font-style: normal;
-  color: $cor-escura;
-  display: inline-block;
-  margin: 5px;
+.campeonato-cabecalho {
+  border-bottom: 3px solid $cor-menu;
 }
 
-.campeonato-cabecalho th:first-child {
-  margin-left: 0px;
+.campeonato-cabecalho th {
+  @include tamanho(pequeno);
+
+  display: inline-block;
+  margin: 0px 10px 10px 0px;
+}
+
+.campeonato-corpo td {
+  @include tamanho(pequeno);
+
+  font-weight: bold;
+  margin: 0px 10px 10px 0px;
+  display: inline-block;
 }
