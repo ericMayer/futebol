@@ -11,6 +11,16 @@ $gap: 30px;
   @include grid();
 }
 
+@mixin grid-campeonatos {
+  display: grid;
+  grid-template-columns: minmax(auto, 1000px) 300px;
+  grid-gap: $gap;
+}
+
+.grid-campeonatos {
+  @include grid-campeonatos();
+}
+
 $tablet: 1120px;
 $celular: 770px;
 
