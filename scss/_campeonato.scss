@@ -1,0 +1,44 @@
+.campeonatos {
+  margin: 60px auto;
+}
+
+.campeonato {
+  grid-column: 2;
+}
+
+.campeonato h1 {
+  @include tamanho(grande);
+
+  @include responsivo(tablet) {
+    font-size: 2rem;
+  }
+}
+
+.rodadas {
+  grid-column: 3;
+}
+
+.rodadas h1 {
+  @include tamanho(grande);
+
+  @include responsivo(tablet) {
+    font-size: 2rem;
+  }
+}
+
+.campeonato-dados {
+  margin-top: 20px;
+}
+
+.campeonato-cabecalho th {
+  @include tamanho(citacao);
+  line-height: 0;
+  font-style: normal;
+  color: $cor-escura;
+  display: inline-block;
+  margin: 5px;
+}
+
+.campeonato-cabecalho th:first-child {
+  margin-left: 0px;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+
+    <meta name="theme-color" content="#0db882" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#0db882" />
+    <meta name="msapplication-navbutton-color" content="#0db882" />
+
+    <link rel="shortcut icon" href="./img/favicon.ico" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&family=Suez+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Brasileirão 2019</title>
+  </head>
+  <body>
+    <div>
+      <nav class="nav">
+        <div class="menu">
+          <!-- aria-expanded e aria-controls são ambos utilizados
+          em leitores de telas, onde um irá dizer que o conteúdo não está expandido do menu abaixo e o outro diz qual item controla, por isso é definido o id com do item que será controlado com mesmo nome -->
+          <button
+            data-menu
+            aria-expanded="false"
+            aria-controls="menu-list"
+            class="menu-botao"
+          >
+            Menu
+          </button>
+
+          <ul id="menu-list" data-menu="list">
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="brasileirao.html">Brasileirão 2019</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="frases">
+          <h1 data-frases="frase">
+            "O futebol é o ópio do povo e o narcotráfico da mídia."
+          </h1>
+          <cite data-frases="cite">Millôr Fernandes</cite>
+        </div>
+
+        <div class="logo">
+          <a href="index.html"
+            ><img src="./img/PNG/logo.png" alt="Logo do site" />
+          </a>
+        </div>
+      </nav>
+
+      <section class="grid-campeonatos campeonatos">
+        <div class="campeonato">
+          <h1>Brasileirão 2019</h1>
+          <table class="campeonato-dados">
+            <thead class="campeonato-cabecalho">
+              <tr>
+                <th>Classificação</th>
+                <th>Pontos</th>
+                <th>Jogos</th>
+                <th>Vitórias</th>
+                <th>Empates</th>
+                <th>Derrotas</th>
+                <th>Gols Feitos</th>
+                <th>Gols Sofridos</th>
+                <th>Saldo de Gols</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="rodadas">
+          <h1>Rodadas</h1>
+        </div>
+      </section>
+
+      <footer class="rodape">
+        <p>© Todos direitos reservados</p>
+
+        <a href="https://www.linkedin.com/in/ericaraujomayer" target="_blank"
+          ><img src="img/PNG/linkedin.png" alt="Linkedin"
+        /></a>
+      </footer>
+    </div>
+
+    <script type="module" src="modules/script.js"></script>
+    <!-- <script src="js/main.js"></script> -->
+  </body>
+</html>

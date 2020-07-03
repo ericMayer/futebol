@@ -13,7 +13,13 @@ h2,
 h3,
 cite,
 p,
-blockquote {
+blockquote,
+table,
+thead,
+tbody,
+tr,
+th,
+td {
   padding: 0px;
   margin: 0px;
 }
@@ -36,4 +42,12 @@ ul {
 img {
   max-width: 100%;
   display: block;
+}
+
+table {
+  border-spacing: 0px;
+}
+
+th {
+  font-weight: normal;
 }
