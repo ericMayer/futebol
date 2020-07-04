@@ -1,26 +1,5 @@
 $gap: 30px;
 
-@mixin grid {
-  display: grid;
-
-  grid-template-columns: 200px minmax(auto, 800px);
-  grid-gap: $gap;
-}
-
-.grid-ligas {
-  @include grid();
-}
-
-@mixin grid-campeonatos {
-  display: grid;
-  grid-template-columns: minmax(auto, 1000px) 300px;
-  grid-gap: $gap;
-}
-
-.grid-campeonatos {
-  @include grid-campeonatos();
-}
-
 $tablet: 1120px;
 $celular: 770px;
 
@@ -34,4 +13,41 @@ $celular: 770px;
       @content;
     }
   }
+}
+
+@mixin grid {
+  display: grid;
+
+  grid-template-columns: 200px minmax(auto, 800px);
+  grid-gap: $gap;
+}
+
+.grid-ligas {
+  @include grid();
+}
+
+@mixin grid-campeonatos {
+  display: grid;
+  grid-template-columns: minmax(auto, 700px) auto;
+  grid-gap: $gap;
+}
+
+.grid-campeonatos {
+  @include grid-campeonatos();
+}
+
+@mixin grid-tabela {
+  display: grid;
+  grid-gap: $gap;
+  grid-template-columns: 100px 600px;
+  @include responsivo(tablet) {
+    grid-template-columns: 100px 400px;
+  }
+  @include responsivo(celular) {
+    grid-template-columns: 100px 300px;
+  }
+}
+
+.grid-campeonato {
+  @include grid-tabela();
 }

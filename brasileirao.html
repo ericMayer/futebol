@@ -61,34 +61,54 @@
       </nav>
 
       <section class="grid-campeonatos campeonatos">
-        <div class="campeonato">
+        <div class="campeonato grid-campeonato">
           <h1>Brasileirão 2019</h1>
-          <table class="campeonato-dados">
-            <thead class="campeonato-cabecalho">
+          <table class="campeonato-cabecalho">
+            <thead>
               <tr>
                 <th>Classificação</th>
-                <th>Pontos</th>
-                <th>Jogos</th>
-                <th>Vitórias</th>
-                <th>Empates</th>
-                <th>Derrotas</th>
-                <th>Gols Feitos</th>
-                <th>Gols Sofridos</th>
-                <th>Saldo de Gols</th>
               </tr>
             </thead>
 
-            <tbody class="campeonato-corpo">
-              <tr>
-                <td>Flamengo</td>
+            <tbody class="campeonato-times" data-campeonato="times">
+              <!-- <tr>
+                <td>Athletico Parananese</td>
                 <td>87</td>
                 <td>38</td>
                 <td>20</td>
                 <td>10</td>
                 <td>40</td>
                 <td>19</td>
-                <td>21</td>
+                <td>21</td> 
+              </tr> -->
+            </tbody>
+          </table>
+
+          <table class="campeonato-dados">
+            <thead>
+              <tr>
+                <th>P</th>
+                <th>J</th>
+                <th>V</th>
+                <th>E</th>
+                <th>D</th>
+                <th>G</th>
+                <th>GS</th>
+                <th>SG</th>
               </tr>
+            </thead>
+
+            <tbody data-campeonato="dados">
+              <!-- <tr>
+                <td>60</td>
+                <td>38</td>
+                <td>15</td>
+                <td>10</td>
+                <td>13</td>
+                <td>30</td>
+                <td>10</td>
+                <td>20</td>
+              </tr> -->
             </tbody>
           </table>
         </div>
