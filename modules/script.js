@@ -8,7 +8,7 @@ const menu = new Menu(
 );
 menu.iniciar();
 
-import Accordion from "./ligaAccordion.js";
+import Accordion from "./home/ligaAccordion.js";
 
 const accordion = new Accordion(
   "[data-liga]",
@@ -16,3 +16,12 @@ const accordion = new Accordion(
   "[data-liga='descricao']"
 );
 accordion.iniciar();
+
+import CampeonatoPassado from "./campeonatos/campeonatosPassados.js";
+
+const brasileirao = new CampeonatoPassado(
+  "https://www.thesportsdb.com/api/v1/json/1/lookuptable.php?l=4351&s=2019",
+  '[data-campeonato="times"]',
+  '[data-campeonato="dados"]'
+);
+brasileirao.iniciar();
