@@ -1,50 +1,77 @@
+// campeonatos margens do desktop e responsivo
 .campeonatos {
   margin: 60px 60px;
+
+  @include responsivo(celular) {
+    margin-left: 10px;
+    margin-right: 0px;
+  }
 }
 
+// uma fica na primeira coluna e no responsivo ocupa
+// todas colunas e é exibida a barra horizontal de rolagem
 .campeonato {
+  grid-column: 1;
+
+  @include responsivo(tablet) {
+    overflow-x: auto;
+
+    grid-column: 1 / -1;
+  }
+}
+
+// o título irá pegar todas colunas
+// é no responsivo do tablet, será diminuído
+// o font-size
+.campeonato h1 {
+  grid-column: 1 / -1;
+
+  @include tamanho(grande);
+
+  @include responsivo(tablet) {
+    font-size: 2rem;
+  }
+}
+
+// ocupa a coluna 1 e terá 10px
+// de espaçamento na vertical entre
+// os itens da tabel
+.campeonato-cabecalho {
+  grid-column: 1;
+  border-spacing: 0px 10px;
+}
+
+// o texto do thead será pequeno, classificação
+.campeonato-cabecalho th {
+  @include tamanho(pequeno);
+}
+
+// os times irão ficar na primeira coluna
+.campeonato-times {
   grid-column: 1;
 }
 
-.campeonato h1 {
-  @include tamanho(grande);
-
-  @include responsivo(tablet) {
-    font-size: 2rem;
-  }
-}
-
-.rodadas {
-  grid-column: 2;
-}
-
-.rodadas h1 {
-  @include tamanho(grande);
-
-  @include responsivo(tablet) {
-    font-size: 2rem;
-  }
-}
-
-.campeonato-dados {
-  margin-top: 20px;
-}
-
-.campeonato-cabecalho {
-  border-bottom: 3px solid $cor-menu;
-}
-
-.campeonato-cabecalho th {
-  @include tamanho(pequeno);
-
-  display: inline-block;
-  margin: 0px 10px 10px 0px;
-}
-
-.campeonato-corpo td {
+// nomes dos times
+.campeonato-times td {
   @include tamanho(pequeno);
 
   font-weight: bold;
-  margin: 0px 10px 10px 0px;
-  display: inline-block;
+}
+
+// pontos, vitórias, derrotas, etc
+.campeonato-dados {
+  grid-column: 2;
+  border-spacing: 0px 10px;
+}
+
+// abreviação dos dados vitórias, derrotas, pontos, etc
+.campeonato-dados th {
+  @include tamanho(pequeno);
+}
+
+// dados em 20, 30, 10 etc
+.campeonato-dados td {
+  @include tamanho(pequeno);
+
+  font-weight: bold;
 }
